@@ -39,7 +39,7 @@ header {
 
 span {
     color: #27c7ab;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 nav {
@@ -56,23 +56,31 @@ nav > ul > li {
     display: inline-block;
     padding-left: 40px;
     cursor: pointer;
+    position: relative;
 }
 
 ul > li > ul {
     display: none;
-    z-index: 1;
-}
-
-ul > li:hover.us > ul {
-    display: block;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    left: 15px;
     list-style-type: none;
     background-color: black;
-    width: 130px;
+    width: 120px;
     padding: 10px 15px;
-    position: absolute;
-    top: 40px;
-    left: 875px;
-    margin: 0 auto;
+}
+
+ul > li > ul:after {
+  content: "";
+  display: block;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: -10px;
+  right: 50px;
+  left: 50px;
 }
 
 ul > li > ul > li {
@@ -94,13 +102,13 @@ ul > li > ul > li {
     background: linear-gradient(to bottom, #fcfff4 0%,#dfe5d7 60%,#afb5bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.before, .after {
+.prev, .next {
     width: 45px;
     height: 300px;
     z-index: 2;
 }
 
-.before a, .after a {
+.prev a, .next a {
     text-decoration: none;
     color: #27c7ab;
     font-weight: 400;
@@ -109,21 +117,30 @@ ul > li > ul > li {
     cursor: pointer;
 }
 
-.before, .image, .description, .after {
+.prev, .image, .description, .next {
     float: left;
 }
 
 .image {
     width: 400px;
     height: 300px;
-    background-image: url("../images/black-chair.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    padding-left: 50px;
+}
+
+.image ul{
+    list-style: none;
+}
+
+.image li{
+    display: none;
+}
+
+.image .visible {
+    display: inline-block;
 }
 
 .description {
-    width: 700px;
+    width: 650px;
     height: 300px;
     text-align: center;
 }
@@ -247,7 +264,9 @@ p {
 .title {
     text-transform: uppercase;
     font-size: 22px;
+    color: black;
     font-weight: 700;
+    width: 400px;
 }
 
 .contain {
@@ -406,6 +425,187 @@ a {
 
 .standard a {
     color: #27c7ab;
+}
+
+/*section "aplication"*/
+.application {
+  background-color: #f9f9f9;
+  padding:30px 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.align_right {
+  text-align: right;
+}
+
+.inline {
+  display: inline-block;
+  width: 396px;
+  vertical-align: top;
+}
+
+.drop_down_list {
+  border: 1px solid #8de0d2;
+  width: 390px;
+  height: 45px;
+  background-color: white;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.list_label {
+  font-size: 24px;
+  padding: 0 10px;
+  line-height: 45px;
+  font-weight: 400;
+  color: #e2e2e2;
+}
+
+.transport_ofert {
+    width: 400px;
+    margin: 0 auto;
+    color: grey;
+    font-size: 26px;
+}
+
+.image_part img{
+  margin: 0 65px;
+}
+
+.summary_panel {
+  background-color: white;
+  width: 100%;
+  height: 195px;
+  padding: 10px;
+}
+
+.application .green_button {
+  font-family: 'Raleway', sans-serif;
+  background-color: #27c7ab;
+  color: white;
+  text-align:center;
+  text-transform: uppercase;
+  width: 300px;
+  height: 55px;
+  padding: 10px 30px;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 30px 50px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.panel_left {
+  display: inline-block;
+  width: 230px;
+  vertical-align: top;
+  padding-bottom:10px;
+  border-bottom:1px solid #e7e7e7;
+  height: 135px;
+}
+
+.panel_right {
+  display: inline-block;
+  width: 140px;
+  border-left:1px solid #e7e7e7;
+  text-align: right;
+  vertical-align: top;
+  padding-bottom:10px;
+  border-bottom:1px solid #e7e7e7;
+  height: 135px;
+}
+
+.panel_left h4 , .panel_right h4 {
+  color: #24baa0;
+  font-size: 20px;
+}
+
+.panel_left span {
+  margin-top:10px;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: #5b5a5a;
+  display: block;
+}
+
+.panel_right span {
+  display: block;
+  font-size: 20px;
+  color: #24baa0;
+  margin-top:10px;
+}
+
+.sum_label{
+  display: inline-block;
+  width: 185px;
+  margin-top: 10px;
+  font-size: 22px;
+  color: #5b5a5a;
+}
+
+.sum {
+  display: inline-block;
+  width: 170px;
+  text-align: right;
+  margin-top: 10px;
+  font-size: 22px;
+  color: #24baa0;
+}
+
+.list_arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #24baa0;
+  display: block;
+  position: absolute;
+  right: 14px;
+  top: 16px;
+  cursor: pointer;
+}
+
+.list_panel {
+  background-color: white;
+  border: 1px solid #27c7ab;
+  width: 389px;
+  list-style: none;
+  margin: 0;
+  left: -359px;
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  display:none;
+}
+
+.visib {
+  display: block;
+}
+
+.list_panel li {
+  margin-top: 5px;
+  cursor: pointer;
+  color: #585858;
+}
+
+.list_panel li:hover {
+  background-color: #27c7ab;
+  color: black;
+}
+
+.tit {
+    font-size: 22px;
+    font-weight: 700;
+    width: 400px;
 }
 
 /*footer - part "form"*/

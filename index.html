@@ -10,7 +10,7 @@
     <header>
         <div class = "container clearfix">
             <div class="logo">
-                Sit <span>on</span> chair
+                <a href="#">Sit <span>on</span> chair</a>
             </div>
             <nav>
                 <ul>
@@ -29,10 +29,15 @@
     </header>
     <section id="about">
         <div class="container clearfix">
-            <div class="before">
+            <div class="prev">
                 <a href="#">&lt;</a>
             </div>
             <div class="image">
+                <ul>
+                    <li><img src="images/black-chair.png" width="400" height="300"></li>
+                    <li><img src="images/orange.png" width="400" height="300"></li>
+                    <li><img src="images/red.png" width="400" height="300"></li>
+                </ul>
             </div>
             <div class="description">
                 <h1>Sit <span>on</span> our <span>chair</span></h1>
@@ -45,7 +50,7 @@
                     </a>
                 </div>
             </div>
-            <div class="after">
+            <div class="next">
                 <a href="#">&gt;</a>
             </div>
         </div>
@@ -53,17 +58,21 @@
 
     <section id="main">
         <div class="container clearfix">
-            <div class="photo-clair">
-                <div class="ground">
-                    Chair CLAIR
-                    <div class="line2">
+            <div class="photo-block">
+                <div class="photo-clair">
+                    <div class="ground">
+                        Chair CLAIR
+                        <div class="line2">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="photo-margarita">
-                <div class="ground">
-                    Chair MARGARITA
-                    <div class="line2">
+            <div class="photo-block">
+                <div class="photo-margarita">
+                    <div class="ground">
+                        Chair MARGARITA
+                        <div class="line2">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,6 +205,89 @@
         <div>
     </section>
 
+    <section class="application">
+        <div class="container">
+            <div class="clearfix">
+                <div class="left">
+                    <div class="title">
+                        Skomponuj swoje krzesło
+                    </div>
+                    <div class="line">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title align_right">
+                        Podsumowanie
+                    </div>
+                    <div class="line right">
+                    </div>
+                </div>
+            </div>
+            <section class="choice_part inline">
+                <div class="formul">
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz rodzaj</span>
+                        <div class="list_arrow">
+                            <ul class="list_panel">
+                                <li value="200">Clair</li>
+                                <li value="250">Margarita</li>
+                                <li value="300">Selena</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz kolor</span>
+                        <div class="list_arrow">
+                            <ul class="list_panel">
+                                <li value="0">Czerwony</li>
+                                <li value="0">Czarny</li>
+                                <li value="0">Pomarańczowy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz materiał</span>
+                        <div class="list_arrow">
+                            <ul class="list_panel">
+                                <li value="50">Tkanina</li>
+                                <li value="200">Skóra</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="transport_ofert">
+                        <input type="checkbox" id="transport" data-transport-price="80" value="transport">
+                        <label class="check-box" for="transport"></label>
+                        <label class="check-text">Transport</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="image_part inline">
+                <img src="images/red_chair.png">
+            </section>
+
+            <section class="summary_part inline">
+                <div class="summary_panel">
+                    <div class="panel_left">
+                        <h4 class="tit">Twój fotel</h4>
+                        <span class="color"></span>
+                        <span class="pattern"></span>
+                        <span class="transports"></span>
+                    </div>
+                    <div class="panel_right">
+                        <span class="title_value"></span>
+                        <span class="color_value"></span>
+                        <span class="pattern_value"></span>
+                        <span class="transports_value"></span>
+                    </div>
+                    <div class="sum_label">SUMA</div>
+                    <div class="sum"><strong></strong></div>
+                </div>
+                <a href="#" class="green_button">Zamawiam</a>
+            </section>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="form">
@@ -218,7 +310,7 @@
                             <img src="images/red_chair.png">
                         </div>
                         <div class="agree">
-                            <input type="checkbox" value="agree" clas="aggr" id="checkbox">
+                            <input type="checkbox" value="agree" class="aggr" id="checkbox">
                             <label class="check-box" for="checkbox"></label>
                             <label class="check-text">
                                 Zgadzam się na przetwarzanie danych osobowych
@@ -257,5 +349,6 @@
             </div>
         </div>
     </footer>
+    <script src="./js/app.js" type="text/javascript"></script>
 </body>
 </html>
